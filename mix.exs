@@ -2,16 +2,16 @@ defmodule ExClacks.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :ex_clacks,
+    [app:             :ex_clacks,
      version:         "0.1.0",
      elixir:          "~> 1.4",
      name:            "ExClacks",
      source_url:      "https://github.com/YellowApple/ExClacks",
      build_embedded:  Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps(),
-     package: package(),
-     description: description()]
+     deps:            deps(),
+     package:         package(),
+     description:     description()]
   end
 
   def application do
@@ -20,7 +20,8 @@ defmodule ExClacks.Mixfile do
   end
 
   defp deps do
-    [{:plug, "~> 1.0"}]
+    [{:plug,   "~> 1.0"},
+     {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp description do
@@ -31,8 +32,11 @@ defmodule ExClacks.Mixfile do
 
   defp package do
     %{maintainers: ["Ryan S. Northrup"],
-      files: ["lib", "mix.exs", "README.md", "COPYING"],
-      licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/YellowApple/ExClacks"}}
+      files:       ["lib/ex_clacks.ex",
+                    "mix.exs",
+                    "README.md",
+                    "COPYING"],
+      licenses:    ["MIT"],
+      links:       %{"GitHub" => "https://github.com/YellowApple/ExClacks"}}
   end
 end
