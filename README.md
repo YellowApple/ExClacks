@@ -1,5 +1,11 @@
 # ExClacks
 
+**EDIT:** Apparently I'm not as original as I thought, since
+ExClacks [already exists](https://github.com/polymetis/ex_clacks).  Oh
+well.  I guess I'll leave this one up for posterity's sake.
+
+----
+
 "A man is not dead while his name is still spoken."
 
 Adds an `x-clacks-overhead` response header with a value of `GNU Terry
